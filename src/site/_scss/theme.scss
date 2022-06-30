@@ -1,0 +1,201 @@
+@import "_variables";
+@import "_vendor/normalize";
+
+// Theme
+@import 'theme/base';
+@import 'theme/typography';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+        
+
+        @media (min-width: 800px) {
+            height: 350px;
+        }
+
+        height: 50vw;
+    }
+
+    h1 {
+        font-family: 'Titan One', cursive;
+        color: $yellow;
+
+        @media (min-width: 800px) {
+            font-size: 5em;
+        }
+
+        font-size: 3.5em;
+        margin-top: 0rem;
+        font-weight: 500;
+    }
+
+    div {
+        color: white;
+
+        @media (min-width: 800px) {
+            font-size: 1.5em;
+        }
+
+        font-size: 1.1em;
+    }
+}
+
+.body {
+    background-color: white;
+    border-radius: 1.5em;
+    padding: 2em;
+    margin-top: 2em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-bottom: 0.5em;
+
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        border-bottom: #f2f2f2 2px solid;
+
+        .title {
+            align-self: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: $orange;
+            color: white;
+            display: inline-block;
+            padding: 0.75em 5em;
+            position: relative;
+            margin: 1em 0;
+
+            font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-left: 13px solid white;
+                border-bottom: 25px solid transparent;
+                border-top: 25px solid transparent;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-right: 13px solid white;
+                border-bottom: 25px solid transparent;
+                border-top: 25px solid transparent;
+            }
+        }
+
+        .content{
+            padding: 1em;
+            font-weight: bold;
+        }
+
+        &.youllneed, &.origin {
+            .content {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+
+                @media (min-width: 800px) {
+                    flex-direction: row;
+                    text-align: left;
+                }
+
+                flex-direction: column;
+                text-align: center;
+
+                svg {
+                    @media (min-width: 800px) {
+                        height: 200px;
+                    }
+                    height: 125px;
+                }
+
+                .title{
+                    text-align: left;
+                }
+            }
+        }
+
+        &.origin {
+        .content{
+            @media (min-width: 800px) {
+                flex-direction: row-reverse;
+                text-align: right;
+            }
+
+            flex-direction: column-reverse;
+        }
+        }
+
+        &.instructions, &.rules {
+            .content {      
+                display: flex;
+                gap: 1.5em;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+
+                @media (min-width: 800px) {
+                    flex-direction: row;
+                }
+
+
+                .item {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap:1em;
+                    margin-bottom: 1em;
+
+                    @media (min-width: 800px) {
+                        width: 31%;
+                        flex-direction: column;
+                        gap:0.5em;
+                    }
+
+                    .number{
+                        width: 50px;
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        
+            font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    }
+
+                    .text{
+                        @media (min-width: 800px) {
+                            text-align: center;
+                        }
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        ul{
+            list-style: none;
+            text-align: center;
+        }
+        color: $text-muted;
+        font-size: 90%;
+        a{
+            color: $text-muted;
+        }
+    }
+}

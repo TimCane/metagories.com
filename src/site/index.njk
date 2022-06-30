@@ -1,0 +1,162 @@
+---
+layout: base
+---
+
+<div class="header">
+    {% include "splash-icon.njk" %}
+    <h1>Metagories</h1>
+    <div>A game of categories with a meta twist.
+    </div>
+</div>
+
+<div class="body">
+
+    <div class="section youllneed">
+        <div class="title">
+            You'll Need:
+        </div>
+        <div class="content">
+            <div class="image">
+                {% include "players.njk" %}
+            </div>
+            <div class="text">
+                Just an odd number of players! This game doesn't require additional props
+            </div>
+        </div>
+    </div>
+
+    <div class="section instructions">
+        <div class="title">
+            Instructions:
+        </div>
+        <div class="content">
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '1' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    Form a circle, or an agreed order of play.
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '2' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    Someone starts by stating a category. For example, 'Colours'.
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '3' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    The player to their right must respond with something which fits in that category. For example,
+                    'Orange'.
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '4' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    Play continues with the next player stating a category that the previous word fits into. For
+                    example, 'Fruit'.
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '5' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    The game continues until someone is unable to say a category or response
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '6' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    After each round, mix the direction up to make it more interesting!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section rules">
+        <div class="title">
+            Rules:
+        </div>
+        <div class="content">
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '1' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    You cant repeat words or categories
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '2' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    To think, you must drink
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">
+                    {% set pageNumber = '3' %}
+                    {% include "instruction-number.njk" %}
+                </div>
+                <div class="text">
+                    Have Fun!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section origin">
+        <div class="title">
+            Origin:
+        </div>
+        <div class="content">
+            <div class="image">
+                {% include "stag-do.njk" %}
+            </div>
+            <div class="text">
+                Everyone has an origin for their version of categories. Metagories, as we know it, was first played at The Goat and Tricycle, Bournemouth on a stag do in 2015. It's been played with a pint in hand ever since!
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="http://timcane.co.uk">Built by Tim</a>
+                </li>
+                <li>
+                    <a href="https://www.vecteezy.com/">Vectors by Vecteezy</a>
+                    <span>
+                        (
+                            <a href="https://www.vecteezy.com/vector-art/223308-people-talking-illustration">1</a>
+                            /
+                            <a href="https://www.vecteezy.com/vector-art/223689-people-talking-illustration">2</a>
+                            /
+                            <a href="https://www.vecteezy.com/vector-art/223252-people-talking-illustration">3</a>                            
+                            )
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

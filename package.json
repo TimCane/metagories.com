@@ -1,0 +1,31 @@
+{
+  "name": "metagories.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve:eleventy": "cross-env ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
+    "serve:sass": "npx sass src/site/_scss:dist/assets/css --watch",
+    "serve": "npm run serve:eleventy & npm run serve:sass",
+    "build:eleventy": "cross-env ELEVENTY_ENV=prod npx @11ty/eleventy",
+    "build:sass": "npx sass src/site/_scss:dist/assets/css",
+    "build": "npm run build:eleventy && npm run build:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimCane/metagories.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimCane/metagories.com/issues"
+  },
+  "homepage": "https://github.com/TimCane/metagories.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "cross-env": "^7.0.3",
+    "sass": "^1.53.0",
+    "sync-request": "^6.1.0"
+  }
+}

@@ -1,0 +1,41 @@
+html {
+  scrollbar-color: $scrollbar-thumb $background-body;
+  scrollbar-width: thin;
+
+  font-size: 62.5%; 
+}
+
+body {
+
+  font-size: 1.5rem; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  max-width: 80rem;
+  margin: 2rem auto;
+  //padding: 0 1rem;
+  word-wrap: break-word;
+  color: $text-main;
+  background: rgb(33,30,73);
+  background: linear-gradient(180deg, rgba(33,30,73,1) 0%, rgba(65,59,145,1) 100%);
+  text-rendering: optimizeLegibility;
+
+
+  margin-bottom: 0;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='800' height='560' preserveAspectRatio='none' viewBox='0 0 800 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1059%26quot%3b)' fill='none'%3e%3crect width='800' height='560' x='0' y='0' fill='rgba(33%2c 30%2c 73%2c 1)'%3e%3c/rect%3e%3cpath d='M271.977%2c418.434C312.37%2c419.503%2c341.783%2c384.355%2c361.189%2c348.913C379.674%2c315.154%2c389.234%2c274.125%2c368.879%2c241.46C349.366%2c210.146%2c308.861%2c206.685%2c271.977%2c205.745C232.629%2c204.742%2c186.05%2c202.348%2c166.124%2c236.292C146.077%2c270.442%2c170.685%2c310.162%2c190.582%2c344.399C210.333%2c378.385%2c232.682%2c417.394%2c271.977%2c418.434' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M623.992%2c326.988C651.783%2c328.112%2c678.972%2c312.9%2c691.381%2c288.008C702.786%2c265.13%2c692.422%2c239.07%2c678.51%2c217.624C666.069%2c198.445%2c646.806%2c185.59%2c623.992%2c184.122C598.022%2c182.451%2c569.07%2c187.344%2c555.799%2c209.73C542.351%2c232.415%2c552.167%2c260.117%2c565.425%2c282.914C578.59%2c305.551%2c597.826%2c325.93%2c623.992%2c326.988' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M365.62%2c507.059C380.499%2c507.495%2c396.585%2c505.706%2c404.99%2c493.421C414.373%2c479.707%2c415.584%2c461.018%2c406.752%2c446.943C398.353%2c433.558%2c381.384%2c429.594%2c365.62%2c430.683C351.811%2c431.637%2c340.291%2c440.084%2c333.28%2c452.019C326.161%2c464.137%2c322.933%2c479.109%2c330.053%2c491.226C337.099%2c503.218%2c351.717%2c506.652%2c365.62%2c507.059' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M193.255%2c518.979C225.652%2c520.126%2c261.518%2c517.872%2c279.546%2c490.93C299.186%2c461.579%2c295.94%2c422.604%2c278.161%2c392.089C260.506%2c361.786%2c228.205%2c339.911%2c193.255%2c342.825C161.754%2c345.452%2c144.716%2c376.604%2c129.779%2c404.462C115.982%2c430.196%2c102.777%2c459.637%2c116.933%2c485.175C131.391%2c511.258%2c163.452%2c517.924%2c193.255%2c518.979' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M619.122%2c607.314C656.776%2c609.969%2c694.462%2c593.16%2c714.023%2c560.877C734.251%2c527.493%2c733.917%2c484.863%2c713.459%2c451.62C693.892%2c419.825%2c656.399%2c404.613%2c619.122%2c406.668C585.221%2c408.537%2c556.939%2c431.016%2c541.232%2c461.116C526.702%2c488.961%2c530.107%2c521.233%2c544.875%2c548.952C560.74%2c578.73%2c585.466%2c604.941%2c619.122%2c607.314' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M53.093%2c70.486C73.619%2c70.637%2c91.885%2c58.632%2c102.413%2c41.01C113.241%2c22.886%2c116.541%2c0.281%2c105.944%2c-17.979C95.382%2c-36.179%2c74.136%2c-44.069%2c53.093%2c-43.979C32.227%2c-43.89%2c11.359%2c-35.653%2c1.019%2c-17.529C-9.243%2c0.458%2c-5.532%2c22.472%2c5.012%2c40.294C15.34%2c57.751%2c32.811%2c70.337%2c53.093%2c70.486' fill='rgba(88%2c 81%2c 173%2c 0.05)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1059'%3e%3crect width='800' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+    background-position: center;
+}
+
+button,
+input,
+textarea {
+  transition:
+    background-color $animation-duration linear,
+    border-color $animation-duration linear,
+    color $animation-duration linear,
+    box-shadow $animation-duration linear,
+    transform $animation-duration ease;
+}
