@@ -6,10 +6,10 @@
   "scripts": {
     "serve:eleventy": "cross-env ELEVENTY_ENV=dev npx @11ty/eleventy --serve",
     "serve:sass": "npx sass src/site/_scss:dist/assets/css --watch",
-    "serve": "npm run serve:eleventy & npm run serve:sass",
+    "serve": "npm-run-all --parallel serve:*",
     "build:eleventy": "cross-env ELEVENTY_ENV=prod npx @11ty/eleventy",
     "build:sass": "npx sass src/site/_scss:dist/assets/css",
-    "build": "npm run build:eleventy && npm run build:sass"
+    "build": "npm-run-all build:*"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "cross-env": "^7.0.3",
-    "sass": "^1.53.0",
-    "sync-request": "^6.1.0"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.53.0"
   }
 }
