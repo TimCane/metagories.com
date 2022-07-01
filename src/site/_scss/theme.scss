@@ -185,6 +185,63 @@
                 }
             }
         }
+
+        &.example {
+            .content {      
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+
+                .item {
+
+                    &.continue{
+                        align-self: center;
+                        font-size: 2em;
+                        font-weight: bold;
+                        font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
+                        color: $purple;
+                    }
+
+                    display: flex;
+                    
+                    align-items: center;
+                    gap:1em;
+                    margin-bottom: 1em;
+
+                    &.left{
+                        flex-direction: row;
+                        .head{
+                            justify-content: right;
+                        }
+                        .text{
+                            text-align: left;
+                        }
+                    }
+
+                    &.right{
+                        flex-direction: row-reverse;
+                        .text{
+                            text-align: right;
+                        }
+                    }
+
+                    .head{
+                        display: flex;
+                        flex-shrink: 1;
+                        svg{
+                            width: 80px;
+                            height: 125;
+                        }
+                    }
+
+                    .text{
+                        flex-grow: 1;
+                        text-align: left;
+                    }
+                }
+            }
+        }
     }
 
     .footer{
