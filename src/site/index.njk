@@ -10,7 +10,6 @@ layout: base
 </div>
 
 <div class="body">
-
     <div class="section youllneed">
         <div class="title">
             You'll Need:
@@ -25,163 +24,72 @@ layout: base
         </div>
     </div>
 
+    {% if instructions %}
     <div class="section instructions">
         <div class="title">
             Instructions:
         </div>
         <div class="content">
+            {% for instruction in instructions %}
             <div class="item">
                 <div class="number">
-                    {% set pageNumber = '1' %}
+                    {% set pageNumber = loop.index %}
                     {% include "instruction-number.njk" %}
                 </div>
                 <div class="text">
-                    Form a circle, or an agreed order of play.
+                    {{ instruction }}
                 </div>
             </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '2' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    Someone starts by stating a category. For example, 'Colours'.
-                </div>
-            </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '3' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    The player to their right must respond with something which fits in that category. For example,
-                    'Orange'.
-                </div>
-            </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '4' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    Play continues with the next player stating a category that the previous word fits into. For
-                    example, 'Fruit'.
-                </div>
-            </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '5' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    The game continues until someone is unable to say a category or response
-                </div>
-            </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '6' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    After each round, mix the direction up to make it more interesting!
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
+    {% endif %}
 
+    {% if rules %}
     <div class="section rules">
         <div class="title">
             Rules:
         </div>
         <div class="content">
+            {% for rule in rules %}
             <div class="item">
                 <div class="number">
-                    {% set pageNumber = '1' %}
+                    {% set pageNumber = loop.index %}
                     {% include "instruction-number.njk" %}
                 </div>
                 <div class="text">
-                    You cant repeat words or categories
+                    {{ rule }}
                 </div>
             </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '2' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    To think, you must drink
-                </div>
-            </div>
-            <div class="item">
-                <div class="number">
-                    {% set pageNumber = '3' %}
-                    {% include "instruction-number.njk" %}
-                </div>
-                <div class="text">
-                    Have Fun!
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
+    {% endif %}
 
-        <div class="section example">
+    {% if examples %}
+    <div class="section example">
         <div class="title">
             Example:
         </div>
         <div class="content">
-            <div class="item left">
+            {% set cls = cycler("left", "right") %}
+            {% for example in examples %}
+            <div class="item {{ cls.next() }}">
                 <div class="head">
-                    {% include "man-head-1.njk" %}
+                    {% include example.head + ".njk" %}
                 </div>
                 <div class="text category">
-                    "Names of Colours"
+                    "{{example.text}}"
                 </div>
             </div>
-            <div class="item right">
-                <div class="head">
-                    {% include "woman-head-1.njk" %}
-                </div>
-                <div class="text response">
-                    "Orange"
-                </div>
-            </div>
-            <div class="item left">
-                <div class="head">
-                    {% include "man-head-2.njk" %}
-                </div>
-                <div class="text category">
-                    "Fruit you will find in a fruit bowl"
-                </div>
-            </div>
-            <div class="item right">
-                <div class="head">
-                    {% include "man-head-1.njk" %}
-                </div>
-                <div class="text category">
-                    "Apple"
-                </div>
-            </div>
-            <div class="item left">
-                <div class="head">
-                    {% include "woman-head-1.njk" %}
-                </div>
-                <div class="text response">
-                    "Companies worth $1 trillion"
-                </div>
-            </div>
-            <div class="item right">
-                <div class="head">
-                    {% include "man-head-2.njk" %}
-                </div>
-                <div class="text category">
-                    "Amazon"
-                </div>
-            </div>
+            {% endfor %}
             <div class="item continue">
                 ...
             </div>
         </div>
     </div>
+    {% endif %}
+
 
     <div class="section origin">
         <div class="title">
