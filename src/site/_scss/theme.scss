@@ -30,7 +30,7 @@
 
         font-size: 3.5em;
         margin-top: 0rem;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     div {
@@ -66,7 +66,7 @@
             font-weight: 600;
             text-transform: uppercase;
             background-color: $orange;
-            color: white;
+            color: #000000;
             display: inline-block;
             padding: 0.75em 5em;
             position: relative;
@@ -101,7 +101,7 @@
 
         .content{
             padding: 1em;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         &.youllneed, &.origin {
@@ -172,7 +172,7 @@
                         width: 50px;
                         flex-grow: 0;
                         flex-shrink: 0;
-                        
+                        font-weight: 600;
             font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
                     }
 
@@ -198,7 +198,7 @@
                     &.continue{
                         align-self: center;
                         font-size: 2em;
-                        font-weight: bold;
+                        font-weight: 600;
                         font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
                         color: $purple;
                     }
@@ -250,7 +250,6 @@
             text-align: center;
         }
         color: $text-muted;
-        font-size: 90%;
         a{
             color: $text-muted;
         }
